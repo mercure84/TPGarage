@@ -1,6 +1,7 @@
 package voitures;
 
 import java.io.PrintStream;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -12,7 +13,7 @@ import options.Option;
  * @author julie
  *
  */
-public class Vehicule implements Option {
+public class Vehicule implements Option, Serializable {
 
 	// variables de la classe
 

@@ -1,6 +1,8 @@
 package options;
 
-public class SiegeChauffant implements Option {
+import java.io.Serializable;
+
+public class SiegeChauffant implements Option,Serializable {
 
 	public double getPrix() {
 		return 562.9d;

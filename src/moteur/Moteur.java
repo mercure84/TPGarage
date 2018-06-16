@@ -1,6 +1,8 @@
 package moteur;
 
-public class Moteur {
+import java.io.Serializable;
+
+public class Moteur implements Serializable {
 
 	public TypeMoteur type;
 	public String cylindre;

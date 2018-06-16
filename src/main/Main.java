@@ -18,7 +18,7 @@ import voitures.Vehicule;
 public class Main {
     public static void main(String[] args) {
    	 Garage garage = new Garage();   
-   	 //System.out.println(garage);
+   	 System.out.println(garage);
    	 
    	 Vehicule lag1 = new Lagouna();
    	 lag1.setMoteur(new MoteurEssence("150 Chevaux", 10256d));

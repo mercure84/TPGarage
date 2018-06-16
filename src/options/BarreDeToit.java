@@ -1,6 +1,8 @@
 package options;
 
-public class BarreDeToit implements Option {
+import java.io.Serializable;
+
+public class BarreDeToit implements Option, Serializable {
 
 	public double getPrix() {
 		return 29.9d;
