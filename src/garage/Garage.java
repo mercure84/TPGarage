@@ -37,23 +37,24 @@ public class Garage implements Serializable {
 		System.out.println("*****************************");
 		System.out.println("*   Garage OpenClassrooms   *");
 		System.out.println("*****************************");
+
+		// charge le fichier où sont sauvegardée les voitures : la lecture de ce fichier
+		// donne un objet de type List<Vehicule> que l'ion va parcourir et afficher dans la console
 		try {
-		ObjectInputStream ois;
-		ois = new ObjectInputStream(new BufferedInputStream(new FileInputStream(new File("sauvegarde/save.txt"))));
+			ObjectInputStream ois;
+			ois = new ObjectInputStream(new BufferedInputStream(new FileInputStream(new File("sauvegarde/save.txt"))));
 
-			System.out.println(ois.readObject());
+			List<Vehicule> listeVehicules = new ArrayList();
+			listeVehicules = (List<Vehicule>) ois.readObject();
 
-			System.out.println(ois.readObject());
-
-
-		
-		
-		
+			for (Vehicule voiture : listeVehicules) {
+				System.out.println(voiture);
+			}
+			ois.close();
 		} catch (IOException | ClassNotFoundException e) {
-			e.printStackTrace();
-			
+			System.out.println("Aucune voiture n'a été garée :))");
+
 		}
-		
 
 		return "";
 
@@ -72,9 +73,9 @@ public class Garage implements Serializable {
 		ObjectOutputStream oos;
 		try {
 			oos = new ObjectOutputStream(
-					new BufferedOutputStream(new FileOutputStream(new File("sauvegarde/save.txt"), true)));
+					new BufferedOutputStream(new FileOutputStream(new File("sauvegarde/save.txt"))));
 
-			oos.writeObject(voiture);
+			oos.writeObject(voitures);
 
 			oos.close();
 

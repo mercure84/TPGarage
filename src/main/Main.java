@@ -14,11 +14,15 @@ import voitures.A300B;
 import voitures.D4;
 import voitures.Lagouna;
 import voitures.Vehicule;
-	
+	/**
+	 * point d'entrée du fichier : énoncé du TP
+	 * @author julie
+	 *
+	 */
 public class Main {
     public static void main(String[] args) {
    	 Garage garage = new Garage();   
-   	 //System.out.println(garage);
+   	 System.out.println(garage);
    	 
    	 Vehicule lag1 = new Lagouna();
    	 lag1.setMoteur(new MoteurEssence("150 Chevaux", 10256d));
@@ -60,9 +64,6 @@ public class Main {
    	 d4_2.addOption(new VitreElectrique());
    	 garage.addVoiture(d4_2);
    	 
-   	System.out.println(garage);
-   	 
-
-   	 
+  	 
     }
 }

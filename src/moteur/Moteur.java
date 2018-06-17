@@ -2,6 +2,11 @@ package moteur;
 
 import java.io.Serializable;
 
+/**
+ * classe moteur, mère des autres moteurs
+ * @author julie
+ *
+ */
 public class Moteur implements Serializable {
 
 	public TypeMoteur type;
