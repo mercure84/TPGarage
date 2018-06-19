@@ -17,11 +17,11 @@ public class Vehicule implements Option, Serializable {
 
 	// variables de la classe
 
-	double prix;
-	String nom;
-	List<Option> options = new ArrayList();;
-	Marque nomMarque;
-	Moteur moteur ;
+	protected double prix;
+	protected String nom;
+	protected List<Option> options = new ArrayList();;
+	protected Marque nomMarque;
+	protected Moteur moteur ;
 	
 	
 	// constructeur véhicule

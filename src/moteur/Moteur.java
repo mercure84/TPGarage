@@ -14,7 +14,7 @@ public class Moteur implements Serializable {
 	public double prix;
 	
 	
-	public Moteur(String cyl, double price) {
+	protected Moteur(String cyl, double price) {
 		cylindre = cyl;
 		prix = price;
 		
@@ -25,7 +25,7 @@ public class Moteur implements Serializable {
 		return null;
 	}
 	
-	double getPrix() {
+	protected double getPrix() {
 		return prix;
 	}
 	

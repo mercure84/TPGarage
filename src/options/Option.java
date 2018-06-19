@@ -8,7 +8,7 @@ package options;
  */
 public interface Option  {
 
-	public double getPrix();
-	public String getNom(); 
+	double getPrix();
+	String getNom(); 
 
 }
